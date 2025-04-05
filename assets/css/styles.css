@@ -5,7 +5,7 @@
     padding: 20px;
     font-family: 'Roboto', Arial, sans-serif; /* Fonte amigável */
 }
-.container é o contêiner principal que abriga os cartões de hotéis
+
 .hotel-card {
     background: white;
     border-radius: 10px;
