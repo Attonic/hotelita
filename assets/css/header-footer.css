@@ -43,7 +43,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 main {
-    flex: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
+    flex: 1; 
 }
 
 a{
