@@ -24,16 +24,48 @@ document.addEventListener("DOMContentLoaded", function () {
         pageTitle.textContent = titles[currentPath] || "Título Padrão";
     }
 
+    // Carrega o menu
     fetch("/assets/components/header.html")
-    .then(response => response.text())
-    .then(data => {
-        document.body.insertAdjacentHTML("afterbegin", data);
-    });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Erro ao carregar o cabeçalho.");
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.body.insertAdjacentHTML("afterbegin", data);
 
-// Carregar o rodapé
+            // Registra o evento de clique após o cabeçalho ser carregado
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+
+            if (menuToggle && menu) {
+                menuToggle.addEventListener("click", function (event) {
+                    event.stopPropagation(); // Impede que o clique no botão feche o menu
+                    menu.classList.toggle("active");
+                });
+
+                // Fecha o menu ao clicar fora dele
+                document.addEventListener("click", function () {
+                    if (menu.classList.contains("active")) {
+                        menu.classList.remove("active");
+                    }
+                });
+
+                // Impede que o clique dentro do menu feche o menu
+                menu.addEventListener("click", function (event) {
+                    event.stopPropagation();
+                });
+            } else {
+                console.error("Menu ou botão de alternância não encontrado.");
+            }
+        })
+        .catch(error => console.error(error));
+
+    // Carregar o rodapé
     fetch("/assets/components/footer.html")
-    .then(response => response.text())
-    .then(data => {
-        document.body.insertAdjacentHTML("beforeend", data);
-    });
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML("beforeend", data);
+        });
 });
