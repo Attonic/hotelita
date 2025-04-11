@@ -1,31 +1,56 @@
 html, body {
+    background-color: #007bff;
     height: 100%; /* Garante que o body ocupe toda a altura da janela */
     margin: 0;
     display: flex;
     flex-direction: column; /* Organiza os elementos em coluna */
     font-family: 'Roboto', Arial, sans-serif; /* Fonte amigável */
 }
-
+img{
+    
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+}
 header {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 0.5rem;
+    background-color: #fdfdfd;
+    color: #007bff;
+    padding: 0.5rem 1rem; /* Reduzi o padding vertical */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    max-width: 100%;
+    margin: 0 auto; 
+}
+
+.logo {
+    max-width: 125px; /* Reduz o tamanho máximo da logo */
+    height: auto;
+    margin-right: 20px; /* Adiciona espaço à direita da logo */
+    margin-left: 20px; /* Adiciona espaço à esquerda da logo */
+    justify-content: left;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin: 0;
+    font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
+    margin-top: 0.1rem; /* Reduz o espaço acima do título */
+    margin-bottom: 0.5rem; 
+    text-align: center;
+    padding: 0;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
     list-style: none;
-    padding: 10px 0;
+    padding: 0;
     margin: 0;
-   
 }
 
 nav ul li {
@@ -33,9 +58,9 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #007bff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem; 
     font-weight: bold;
 }
 
@@ -62,4 +87,81 @@ footer {
         text-align: center;
     padding: 15px;
     margin-top: 20px;
+}
+
+/* Estilo do botão de menu */
+.menu-toggle {
+    display: none; /* Esconde o botão no desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #007bff;
+}
+
+/* Exibe o menu por padrão */
+.menu {
+    display: flex; /* Exibe o menu em telas maiores */
+    flex-direction: row; /* Alinha os itens horizontalmente */
+    background-color: transparent; /* Remove o fundo em telas maiores */
+    position: static; /* Remove o posicionamento absoluto */
+    box-shadow: none; /* Remove a sombra */
+}
+
+.menu.active {
+    display: flex; /* Exibe o menu quando ativo */
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 1.2rem; 
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; 
+    }
+
+    .menu {
+        display: none; /* Oculta o menu por padrão no mobile */
+        flex-direction: column; /* Empilha os itens do menu */
+        background-color: #fdfdfd;
+        position: absolute;
+        top: 60px; /* Ajuste conforme a altura do header */
+        right: 0;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Exibe o botão no modo mobile */
+    }
+
+    .menu.active {
+        display: flex; /* Exibe o menu quando ativo no mobile */
+    }
 }
