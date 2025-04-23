@@ -1,81 +1,104 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const hotels = [
-        {   id: 1, 
-            name: "Hotel Brasil", 
-            location: "Centro", 
-            description: "Conforto garantido.", 
-            contact: "99999-9999", 
-            image: "/assets/img/hoteimg.jpg" },
+    const hotelList = document.getElementById("hotel-list"); // Para a página principal
+    const visitadosContainer = document.getElementById("mais-visitados"); // Para a página de mais visitados
 
-        {   id: 2, 
-            name: "Hotel Tropical", 
-            location: "Centro", 
-            description: "Vista incrível.", 
-            contact: "98888-8888", 
-            image: "/assets/img/hoteimg.jpg" },
+    // Função para buscar todos os hotéis
+    async function fetchHotels() {
+        if (!hotelList) return; // Evita erros se o elemento não existir
+        try {
+            const response = await fetch("http://localhost:8080/hoteis");
+            if (!response.ok) {
+                throw new Error("Erro ao buscar hotéis");
+            }
+            const hotels = await response.json();
+            renderHotels(hotels);
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
-        {   id: 3, 
-            name: "Hotel Vania", 
-            location: "Lago Encantado", 
-            description: "Clima agradável.", 
-            contact: "97777-7777", 
-            image: "/assets/img/hoteimg.jpg" },
-            
-        {   id: 4, 
-            name: "Pousada Lodas", 
-            location: "Bairro Verde", 
-            description: "Tranquilidade e natureza.", 
-            contact: "96666-6666", 
-            image: "/assets/img/hoteimg.jpg" },
-        
-        {   id: 5, 
-            name: "Pousada Lodas", 
-            location: "Bairro Verde", 
-            description: "Tranquilidade e natureza.", 
-            contact: "96666-6666", 
-            image: "/assets/img/hoteimg.jpg" },
-            
-        {   id: 6, 
-            name: "Pousada Lodas", 
-            location: "Bairro Verde", 
-            description: "Tranquilidade e natureza.", 
-            contact: "96666-6666", 
-            image: "/assets/img/hoteimg.jpg" },
-        
-        {   id: 7, 
-            name: "Pousada Lodas", 
-            location: "Bairro Verde", 
-            description: "Tranquilidade e natureza.", 
-            contact: "96666-6666", 
-            image: "/assets/img/hoteimg.jpg" },
+    // Função para renderizar os hotéis na página principal
+    function renderHotels(hotels) {
+        hotels.forEach(hotel => {
+            const hotelCard = document.createElement("div");
+            hotelCard.classList.add("hotel-card");
+            hotelCard.innerHTML = `
+                <img src="${hotel.imagem}" alt="${hotel.nome}" class="hotel-image">
+                <h2>${hotel.nome}</h2>
+                <p><strong>Localização:</strong> ${hotel.descricao}</p>
+                <p><strong>Contato:</strong> ${hotel.telefone}</p>
+                <button class="view-button" data-id="${hotel.id}">Ver mais</button>
+            `;
+            hotelList.appendChild(hotelCard);
+        });
 
-        {   id: 8, 
-            name: "Pousada Lodas", 
-            location: "Bairro Verde", 
-            description: "Tranquilidade e natureza.", 
-            contact: "96666-6666", 
-            image: "/assets/img/hoteimg.jpg" },
-        
-        ];
+        // Adicione eventos de clique aos botões "Ver mais"
+        const buttons = document.querySelectorAll(".view-button");
+        buttons.forEach(button => {
+            button.addEventListener("click", async (event) => {
+                const hotelId = event.target.getAttribute("data-id");
+                try {
+                    await fetch(`http://localhost:8080/hoteis/${hotelId}/incrementar-visitas`, {
+                        method: "PUT"
+                    });
+                    // Redireciona para a página do hotel (se necessário)
+                    window.location.href = `hoteis/hotel${hotelId}.html`;
+                } catch (error) {
+                    console.error("Erro ao incrementar visitas:", error);
+                }
+            });
+        });
+    }
 
-    const hotelList = document.getElementById("hotel-list");
+    // Função para buscar os hotéis mais visitados
+    async function fetchMaisVisitados() {
+        if (!visitadosContainer) return; // Evita erros se o elemento não existir
+        try {
+            const response = await fetch("http://localhost:8080/hoteis/populares");
+            if (!response.ok) {
+                throw new Error("Erro ao buscar hotéis mais visitados");
+            }
+            const hotels = await response.json();
+            renderMaisVisitados(hotels);
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
-    hotels.forEach(hotel => {
-        const hotelCard = document.createElement("div");
-        hotelCard.classList.add("hotel-card");
-        hotelCard.innerHTML = `
-            <img src="${hotel.image}" alt="${hotel.name}" class="hotel-image">
-            <h2>${hotel.name}</h2>
-            <p><strong>Localização:</strong> ${hotel.location}</p>
-            <p>${hotel.description}</p>
-            <p><strong>Contato:</strong> ${hotel.contact}</p>
-            <a href="hoteis/hotel${hotel.id}.html"><button class="view-button">Ver mais</button></a>
-        `;
-        hotelList.appendChild(hotelCard);
-    });
+    // Função para renderizar os hotéis mais visitados
+    function renderMaisVisitados(hotels) {
+        hotels.forEach(hotel => {
+            const hotelCard = document.createElement("div");
+            hotelCard.classList.add("hotel-card");
+            hotelCard.innerHTML = `
+                <img src="${hotel.imagem}" alt="${hotel.nome}" class="hotel-image">
+                <h2>${hotel.nome}</h2>
+                <p><strong>Localização:</strong> ${hotel.descricao}</p>
+                <p><strong>Contato:</strong> ${hotel.telefone}</p>
+                <button class="view-button" data-id="${hotel.id}">Ver mais</button>
+            `;
+            visitadosContainer.appendChild(hotelCard);
+        });
 
+        // Adicione eventos de clique aos botões "Ver mais"
+        const buttons = document.querySelectorAll(".view-button");
+        buttons.forEach(button => {
+            button.addEventListener("click", async (event) => {
+                const hotelId = event.target.getAttribute("data-id");
+                try {
+                    await fetch(`http://localhost:8080/hoteis/${hotelId}/incrementar-visitas`, {
+                        method: "PUT"
+                    });
+                    // Redireciona para a página do hotel (se necessário)
+                    window.location.href = `hoteis/hotel${hotelId}.html`;
+                } catch (error) {
+                    console.error("Erro ao incrementar visitas:", error);
+                }
+            });
+        });
+    }
 
-
-       
-   
+    // Chamar as funções para buscar e exibir os hotéis
+    fetchHotels();
+    fetchMaisVisitados();
 });

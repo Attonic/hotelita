@@ -42,6 +42,7 @@
     margin-top: 10px;
     width: 100%;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .view-button:hover {
