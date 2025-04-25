@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    font-family: 'Roboto', Arial, sans-serif; /* Fonte amigável */
+    font-family: "Roboto", Arial, sans-serif; /* Fonte amigável */
 }
 
 .hotel-card {
@@ -12,11 +12,20 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 15px;
     padding: 15px;
+<<<<<<< HEAD
     height: 350px;
     width: 100%; /* Ajusta para ocupar toda a largura disponível */
     max-width: 400px; /* Define um limite máximo para os cartões */
+=======
+    height: 320px; /* Altura fixa para os cartões */
+    width: 400px;
+>>>>>>> att-front
     text-align: center;
     box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+.hotel-card p {
+    font-size: 1rem;
 }
 
 .hotel-card:hover {
@@ -26,8 +35,13 @@
 }
 
 .hotel-image {
+<<<<<<< HEAD
     width: 10rem;
     height: 7rem;
+=======
+    width: auto;
+    height: 5rem;
+>>>>>>> att-front
     object-fit: contain;
     border: #0056b3 solid 2px;
     border-radius: 20px;
@@ -43,7 +57,7 @@
     padding: 10px;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
+    margin: 10px 0;
     width: 100%;
     border-radius: 5px;
     font-weight: bold;
@@ -53,9 +67,9 @@
     background-color: #0056b3;
 }
 
-
 @media (max-width: 768px) {
     .hotel-card {
+<<<<<<< HEAD
         width: 95%;
         height: 25rem; /* Ajusta os cards para ocupar toda a largura em telas menores */
     }
@@ -67,3 +81,13 @@
         font-size: 0.9rem; /* Reduz o tamanho do botão em telas menores */
    }
 }
+=======
+        width: 100%; /* Ajusta os cards para ocupar toda a largura em telas menores */
+        height: auto;
+    }
+
+    .hotel-card p {
+        font-size: 14px; /* Tamanho da fonte menor em telas menores */
+    }
+}
+>>>>>>> att-front

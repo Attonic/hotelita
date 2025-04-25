@@ -1,18 +1,21 @@
-html, body {
+html,
+body {
     background-color: #007bff;
     height: 100%; /* Garante que o body ocupe toda a altura da janela */
     margin: 0;
+    padding: 0; /* Remove o padding padrão do body */
     display: flex;
     flex-direction: column; /* Organiza os elementos em coluna */
-    font-family: 'Roboto', Arial, sans-serif; /* Fonte amigável */
+    font-family: "Roboto", Arial, sans-serif; /* Fonte amigável */
 }
-img{
-    
-    max-width: 200px;
+img {
+    max-width: 600px;
     height: auto;
     display: block;
-    margin: 0 auto; /* Centraliza a imagem */
+    margin: 10px auto; /* Centraliza a imagem */
+    padding: 10px;
 }
+
 header {
     background-color: #fdfdfd;
     color: #007bff;
@@ -24,10 +27,10 @@ header {
 
 .header-container {
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
+    align-items: center;
+    justify-content: space-between;
     max-width: 100%;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .logo {
@@ -41,7 +44,7 @@ header {
 header h1 {
     font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
     margin-top: 0.1rem; /* Reduz o espaço acima do título */
-    margin-bottom: 0.5rem; 
+    margin-bottom: 0.5rem;
     text-align: center;
     padding: 0;
 }
@@ -60,7 +63,7 @@ nav ul li {
 nav ul li a {
     color: #007bff;
     text-decoration: none;
-    font-size: 1rem; 
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -68,10 +71,10 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 main {
-    flex: 1; 
+    flex: 1;
 }
 
-a{
+a {
     font-size: 19px;
 }
 a:hover {
@@ -80,12 +83,22 @@ a:hover {
     transition: all 0.3s ease;
 }
 
+main p {
+    color: #1a1e21;
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte dos parágrafos */
+    line-height: 2; /* Aumenta o espaçamento entre linhas */
+    margin: 10px; /* Adiciona margem lateral aos parágrafos */
+    text-align: left; /* Justifica o texto */
+    background-color: #fdfdfd;
+    padding: 5px 30px; /* Adiciona preenchimento interno */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+}
 
 footer {
-    background-color: #007bff;
+    background-color: #1a1e21;
     color: white;
-        text-align: center;
-    padding: 15px;
+    text-align: center;
+    padding: 20px;
     margin-top: 20px;
 }
 
@@ -114,25 +127,30 @@ footer {
 
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 20px 0;
     }
 
     header h1 {
-        font-size: 1.2rem; 
+        font-size: 1.2rem;
     }
 
     nav ul li a {
-        font-size: 0.9rem; 
+        font-size: 1.5rem;
+    }
+
+    img {
+        max-width: 95%; /* Imagem ocupa 100% da largura no mobile */
+        height: auto; /* Mantém a proporção da imagem */
     }
 
     .menu {
@@ -140,10 +158,12 @@ footer {
         flex-direction: column; /* Empilha os itens do menu */
         background-color: #fdfdfd;
         position: absolute;
-        top: 60px; /* Ajuste conforme a altura do header */
+        top: 70px; /* Ajuste conforme a altura do header */
         right: 0;
         width: 100%;
+        height: auto;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding-top: 20px; /* Adiciona espaço acima do menu */
     }
 
     .menu ul {
@@ -153,7 +173,7 @@ footer {
     }
 
     .menu ul li {
-        margin: 10px 0;
+        margin: 20px 0;
         text-align: center;
     }
 
