@@ -1,9 +1,10 @@
+
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    font-family: 'Roboto', Arial, sans-serif; /* Fonte amigável */
+    font-family: "Roboto", Arial, sans-serif; /* Fonte amigável */
 }
 
 .hotel-card {
@@ -12,11 +13,14 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 15px;
     padding: 15px;
-    height: 350px;
-    width: 100%; /* Ajusta para ocupar toda a largura disponível */
-    max-width: 400px; /* Define um limite máximo para os cartões */
+    width: 400px;
+    height: 450px; /* Altura fixa para os cartões */
     text-align: center;
     box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+.hotel-card p {
+    font-size: 1rem;
 }
 
 .hotel-card:hover {
@@ -26,11 +30,19 @@
 }
 
 .hotel-image {
-    width: 10rem;
-    height: 7rem;
+    background: #007bff61;
+    padding: 2px;
+    width: auto;
+    height: 8rem;
+    border-radius: 10px;
     object-fit: contain;
-    border: #0056b3 solid 2px;
-    border-radius: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .hotel-image:hover {
+        transform: scale(1.3);
+        transition: all 0.3s ease;
+    }
 }
 
 .hotel-info {
@@ -43,7 +55,7 @@
     padding: 10px;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
+    margin: 10px 0;
     width: 100%;
     border-radius: 5px;
     font-weight: bold;
@@ -53,17 +65,18 @@
     background-color: #0056b3;
 }
 
-
 @media (max-width: 768px) {
     .hotel-card {
-        width: 95%;
-        height: 25rem; /* Ajusta os cards para ocupar toda a largura em telas menores */
+        width: 100%; /* Ajusta os cards para ocupar toda a largura em telas menores */
+        height: auto;
+        margin: 10px 0; /* Margem vertical para espaçamento entre os cartões */
     }
-   
-    .hotel-info {
-        font-size: 0.3rem; /* Reduz o tamanho da fonte em telas menores */
+
+    .hotel-image {
+        height: auto; /* Ajusta a altura da imagem em telas menores */
     }
-    .view-button {
-        font-size: 0.9rem; /* Reduz o tamanho do botão em telas menores */
-   }
+
+    .hotel-card p {
+        font-size: 1rem; /* Tamanho da fonte menor em telas menores */
+    }
 }

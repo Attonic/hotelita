@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
             "/pages/visitados.html": "Hotéis Mais Visitados",
             "/pages/sobre.html": "Sobre o Projeto",
             "/pages/seuHotel.html": "Entre em Contato",
-            "/pages/hoteis/hotel1.html": "Hotel Brasil",
-            "/pages/hoteis/hotel2.html": "Hotel Tropical",
-            "/pages/hoteis/hotel3.html": "Hotel Vania",
-            "/pages/hoteis/hotel4.html": "Pousada Lodas",
+            "/pages/hoteis/hotel1.html": "Hotel Brasill",
+            "/pages/hoteis/hotel2.html": "Hotel Por Do Sol",
+            "/pages/hoteis/hotel3.html": "Plaza Hotel e Restaurante",
+            "/pages/hoteis/hotel4.html": "Hotel Green Villages",
             
         };
 
