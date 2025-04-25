@@ -8,6 +8,7 @@ body {
     flex-direction: column; /* Organiza os elementos em coluna */
     font-family: "Roboto", Arial, sans-serif; /* Fonte amigável */
 }
+
 img {
     max-width: 600px;
     height: auto;
@@ -67,9 +68,6 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
 main {
     flex: 1;
 }
@@ -78,7 +76,6 @@ a {
     font-size: 19px;
 }
 a:hover {
-    box-shadow: 0 6px 0px rgba(0, 0, 0, 0.3);
     font-size: 20px;
     transition: all 0.3s ease;
 }
