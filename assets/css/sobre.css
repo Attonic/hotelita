@@ -1,18 +1,18 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto', Arial, sans-serif; /* Fonte amigável */
+    font-family: "Roboto", Arial, sans-serif; /* Fonte amigável */
     background-color: #f9f9f9;
     color: #333;
 }
 
-
-
 header h1 {
     font-size: 2.5rem;
     margin: 0;
+    margin-bottom: 5px;
 }
 
 nav ul {
@@ -21,7 +21,6 @@ nav ul {
     list-style: none;
     padding: 10px 0;
     margin: 0;
-   
 }
 
 nav ul li {
@@ -29,7 +28,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #007bff;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
@@ -51,11 +50,13 @@ main {
     margin: 0 auto;
 }
 
-.sobre, .nossa-equipe {
+.sobre,
+.nossa-equipe {
     margin-bottom: 30px;
 }
 
-.sobre h2, .nossa-equipe h3 {
+.sobre h2,
+.nossa-equipe h3 {
     padding-left: 4rem;
     font-size: 2rem;
     color: #007bff;
@@ -85,12 +86,4 @@ main {
 
 .nossa-equipe ul li a:hover {
     text-decoration: underline;
-}
-
-footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 1rem;
 }
