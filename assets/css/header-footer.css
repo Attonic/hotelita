@@ -1,6 +1,6 @@
 html,
 body {
-    background-color: #007bff;
+    background-color: #1466bd;
     height: 100%; /* Garante que o body ocupe toda a altura da janela */
     margin: 0;
     padding: 0; /* Remove o padding padrão do body */
@@ -17,9 +17,9 @@ img {
 }
 
 header {
-    background-color: #fdfdfd;
+    background-color: #ededec;
     color: #007bff;
-    padding: 0.5rem 1rem; /* Reduzi o padding vertical */
+    padding: 0.5rem 0.5rem; /* Reduzi o padding vertical */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 0;
     padding: 0;
@@ -27,6 +27,7 @@ header {
 
 .header-container {
     display: flex;
+    max-height: 3rem;
     align-items: center;
     justify-content: space-between;
     max-width: 100%;
@@ -89,14 +90,14 @@ main p {
     line-height: 2; /* Aumenta o espaçamento entre linhas */
     margin: 10px; /* Adiciona margem lateral aos parágrafos */
     text-align: left; /* Justifica o texto */
-    background-color: #fdfdfd;
+    background-color: #ededec;
     padding: 5px 30px; /* Adiciona preenchimento interno */
     border-radius: 5px; /* Adiciona bordas arredondadas */
 }
 
 footer {
     background-color: #1a1e21;
-    color: white;
+    color: #ededec;
     text-align: center;
     padding: 20px;
     margin-top: 20px;
@@ -107,7 +108,7 @@ footer {
     display: none; /* Esconde o botão no desktop */
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     cursor: pointer;
     color: #007bff;
 }
@@ -126,14 +127,19 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .logo{
+        max-width: 100px; /* Reduz o tamanho máximo da logo no mobile */
+        margin-right: auto; /* Centraliza a logo no mobile */
+    }
     .header-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
+        max-width: 100%;
     }
 
     nav ul li {

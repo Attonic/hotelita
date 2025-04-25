@@ -5,8 +5,8 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "Roboto", Arial, sans-serif; /* Fonte amigável */
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #333333;
+    color: #ffffff;
 }
 
 header h1 {
