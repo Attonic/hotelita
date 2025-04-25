@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         method: "PUT"
                     });
                     // Redireciona para a página do hotel (se necessário)
-                    window.location.href = `hoteis/hotel${hotelId}.html`;
+                    window.location.href = `/pages/hoteis/hotel${hotelId}.html`;
                 } catch (error) {
                     console.error("Erro ao incrementar visitas:", error);
                 }
