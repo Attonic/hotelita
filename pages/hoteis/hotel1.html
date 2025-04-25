@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hotel Brasil</title>
         <link rel="stylesheet" href="/assets/css/header-footer.css" />
+        <link rel="stylesheet" href="/assets/css/maisVisitados-carrocel.css">
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
             rel="stylesheet"
@@ -15,21 +16,61 @@
             <h1 id="page-title"></h1>
         </header>
         <main class="container">
-            <img
-                src="https://i.ibb.co/Gff7nbjs/HBrasil.png"
-                alt="Hotel Brasil"
-                class="hotel-image"
-            />
-            <p><strong>Localização:</strong>Avenida Brasil, Centro</p>
-            <p>Conforto garantido com os melhores serviços.</p>
-            <p>
-                <strong>Contato:</strong>
-                <a target="_blank" href="https://wa.me/5598999999999"
-                    >99999-9999</a
-                >
-            </p>
+            <!-- Carrossel de Imagens -->
+             <h2>Imagens</h3>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="https://i.ibb.co/Gff7nbjs/HBrasil.png" alt="Imagem 1" />
+                    <img src="https://i.ibb.co/N6b3F9bB/HBrasil1.png" alt="Imagem 2" />
+                    <img src="https://i.ibb.co/7t4bq2MM/HBrasil2.png" alt="Imagem 3" />
+                    <img src="https://i.ibb.co/MkMds50C/HBrasil3.png" alt="Imagem 4" />
+                </div>
+                <div class="carousel-buttons">
+                    <button id="prev">❮</button>
+                    <button id="next">❯</button>
+                </div>
+            </div>
+
+                
+                <div class="contatos-infos">
+                    <h3>Informações</h3>
+                <p>♦️No Centro da cidade e tudo pertinho de você.🏨
+                    ♦️ Prezamos pelo seu bem estar , venha fazer sua reserva ! 📞
+                <br><strong>Localização:</strong> Avenida Brasil, Centro
+                <br><strong>Quantidades de Quartos:</strong> 49
+                <br><strong>Tipo de Quartos:</strong> Simples, Casal, Triplo, Suíte
+                <br><strong>Preço médio:</strong> R$ 135,00
+                <br><strong>Serviços:</strong> Café da manhã, Estacionamento, Wi-Fi, Ar-condicionado, Serviço de quarto.
+                <br><strong>Formas de pagamento:</strong> Dinheiro, Crédito, Débito, Pix
+                <br><strong>Hórario de Check-in:</strong> 12:00/00:00
+                <br><strong>Politica de Cancelamento:</strong> 1 dia anterior </p>
+                
+                
+
+                
+
+                <h3>Redes Sociais e Contatos</h3>
+                <div class="redes-sociais">
+                   
+                    <img class="logo-redes" src="/assets/img/logo/instagram-logo.svg" alt="Instagram Logo" onerror="this.src='/assets/img/logo/default-instagram-logo.svg'">
+                 
+                    <img class="logo-redes" src="/assets/img/logo/whatsapp-logo.svg" alt="whatsapp-logo" onerror="this.src='/assets/img/logo/default-whatsapp-logo.svg'"/>
+                </div>
+
+
+                <p>
+                    <strong>Instagram:</strong>
+                    <a target="_blank" rel="noopener" href="https://www.instagram.com/hotelbrasilreserva?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        >Hotel Brasil LTDA</a>
+                <p>
+                    <strong>Contato:</strong>
+                    <a target="_blank" rel="noopener" href="https://wa.me/5598985690708"
+                        >(98) 98569-0708</a>
+                </p>
+            </div>
         </main>
         <script src="/assets/js/script.js"></script>
         <script src="/assets/js/header.js"></script>
+        <script src="/assets/js/carrocel.js"></script>
     </body>
 </html>

@@ -17,6 +17,7 @@ img {
 }
 
 header {
+    z-index: 10;
     background-color: #ededec;
     color: #007bff;
     padding: 0.5rem 0.5rem; /* Reduzi o padding vertical */
