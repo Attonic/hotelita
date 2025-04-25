@@ -12,8 +12,8 @@ img {
     max-width: 600px;
     height: auto;
     display: block;
-    margin: 10px auto; /* Centraliza a imagem */
-    padding: 10px;
+    margin: 10px auto; /*Centraliza a imagem */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
 }
 
 header {
@@ -141,7 +141,7 @@ footer {
     }
 
     header h1 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     nav ul li a {
