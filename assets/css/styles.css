@@ -12,9 +12,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 15px;
     padding: 15px;
-    height: 300px; /* Altura fixa para os cartões */
-    width: 400px;
+    height: 350px;
+    width: 100%; /* Ajusta para ocupar toda a largura disponível */
+    max-width: 400px; /* Define um limite máximo para os cartões */
     text-align: center;
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
 }
 
 .hotel-card:hover {
@@ -24,9 +26,11 @@
 }
 
 .hotel-image {
-    width: 5rem;
+    width: 10rem;
+    height: 7rem;
     object-fit: contain;
-    border-radius: 10px;
+    border: #0056b3 solid 2px;
+    border-radius: 20px;
 }
 
 .hotel-info {
@@ -52,7 +56,14 @@
 
 @media (max-width: 768px) {
     .hotel-card {
-        width: 100%; /* Ajusta os cards para ocupar toda a largura em telas menores */
+        width: 95%;
+        height: 25rem; /* Ajusta os cards para ocupar toda a largura em telas menores */
     }
    
+    .hotel-info {
+        font-size: 0.3rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+    .view-button {
+        font-size: 0.9rem; /* Reduz o tamanho do botão em telas menores */
+   }
 }

@@ -7,14 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
             "/pages/index.html": "Hotéis em Itapecuru Mirim",
             "/pages/visitados.html": "Hotéis Mais Visitados",
             "/pages/sobre.html": "Sobre o Projeto",
+            "/pages/seuHotel.html": "Entre em Contato",
             "/pages/hoteis/hotel1.html": "Hotel Brasil",
             "/pages/hoteis/hotel2.html": "Hotel Tropical",
             "/pages/hoteis/hotel3.html": "Hotel Vania",
             "/pages/hoteis/hotel4.html": "Pousada Lodas",
-            "/pages/hoteis/hotel5.html": "Pousada Lodas",
-            "/pages/hoteis/hotel6.html": "Pousada Lodas",
-            "/pages/hoteis/hotel7.html": "Pousada Lodas",
-            "/pages/hoteis/hotel8.html": "Pousada Lodas"
+            
         };
 
         // Obtenha o caminho da página atual
