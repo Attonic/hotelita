@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Hotel</title>
+    <link rel="stylesheet" href="/assets/css/header-footer.css">
+    <link rel="stylesheet" href="/assets/css/seuHotel.css">
+    <link rel="stylesheet" href="/assets/css/header-footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="page-title"></h1>  
+    </header>
+    <main class="container">
+        <section class="sobre">
+            <h2>Quer seu Hotel na vitrine?</h2>
+            <h3>Entre em contato conosco e conheça mais:</h3>
+            <a href="/pages/sobre.html" title="Entre em contato conosco" class="contact-button">Entre em Contato</a>
+        </section>
+        
+        <section class="Contato">
+            <h3>Ou responda nosso formulário</h3>
+            <p>Acesse o link:</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScfoGS-51vbC7zL3vLbTCrLgXu7BW9sqKKXV403_oIqL9E00g/viewform" 
+               class="contact-button" target="_blank" rel="noopener">Formulário de Solicitação</a>
+
+            <h3>Deixe uma Mensagem</h3>
+            <form action="" method="POST" class="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/header.js"></script>
+</body>
+</html>

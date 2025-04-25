@@ -1,0 +1,124 @@
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza verticalmente */
+    padding: 20px;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 95%; /* Aumenta a largura máxima para telas menores */
+    width: 100%; /* Garante que ocupe toda a largura disponível */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: visible; /* Garante que o conteúdo não seja cortado */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    main {
+        max-width: 1200px; /* Define um limite maior para telas maiores */
+    }
+}
+
+/* Centralizar os botões e links */
+.sobre, .Contato {
+    text-align: center;
+}
+
+.contact-button, .Contato a {
+    margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 20px; /* Ajusta o espaçamento */
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.contact-button:hover, .Contato a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estilo do formulário */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%; /* Garante que o formulário ocupe o espaço disponível */
+    max-width: 600px; /* Limita a largura máxima */
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    align-self: flex-start;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 576px) {
+    .contact-form {
+        padding: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
