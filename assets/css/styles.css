@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    font-family: 'Roboto', Arial, sans-serif; /* Fonte amigável */
+    font-family: "Roboto", Arial, sans-serif; /* Fonte amigável */
 }
 
 .hotel-card {
@@ -12,9 +12,13 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 15px;
     padding: 15px;
-    height: 300px; /* Altura fixa para os cartões */
+    height: 320px; /* Altura fixa para os cartões */
     width: 400px;
     text-align: center;
+}
+
+.hotel-card p {
+    font-size: 1rem;
 }
 
 .hotel-card:hover {
@@ -24,7 +28,8 @@
 }
 
 .hotel-image {
-    width: 5rem;
+    width: auto;
+    height: 5rem;
     object-fit: contain;
     border-radius: 10px;
 }
@@ -39,7 +44,7 @@
     padding: 10px;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
+    margin: 10px 0;
     width: 100%;
     border-radius: 5px;
     font-weight: bold;
@@ -49,10 +54,13 @@
     background-color: #0056b3;
 }
 
-
 @media (max-width: 768px) {
     .hotel-card {
         width: 100%; /* Ajusta os cards para ocupar toda a largura em telas menores */
+        height: auto;
     }
-   
+
+    .hotel-card p {
+        font-size: 14px; /* Tamanho da fonte menor em telas menores */
+    }
 }
