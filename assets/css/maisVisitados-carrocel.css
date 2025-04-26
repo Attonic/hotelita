@@ -3,14 +3,16 @@
 }
 
 h3 {
+    margin-top: 2.4rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #007bff; 
     margin-bottom: 20px; 
 }
 h2 {
-    color: #ffffff; /* Azul consistente com o tema da página */
-    font-size: 1.5rem; /* Tamanho ajustado para destaque */
+    margin-top: 2.4rem;
+    color: #007bff; /* Azul consistente com o tema da página */
+    font-size: 1.8rem; /* Tamanho ajustado para destaque */
     text-align: center; /* Centraliza o texto */
     margin-bottom: 15px; /* Espaçamento inferior */
     font-weight: bold; /* Deixa o texto em negrito */
@@ -34,11 +36,7 @@ a{
     color: #333; /* Cor do texto */
 }
 
-a:hover {
-    box-shadow: 0 6px 0px rgba(0, 0, 0, 0.3);
-    font-size: 20px;
-    transition: all 0.3s ease;
-}
+
 
 .redes-sociais {
     display: flex;

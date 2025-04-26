@@ -4,13 +4,13 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    font-family: "Roboto", Arial, sans-serif; /* Fonte amigável */
+    
 }
 
 .hotel-card {
     background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(70, 70, 70, 0.5);
     margin: 15px;
     padding: 15px;
     width: 400px;
@@ -26,6 +26,7 @@
 .hotel-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     transform: translateY(-8px);
+    transition: transform 0.2s;
     transition: all 0.3s ease;
 }
 
@@ -56,13 +57,17 @@
     border: none;
     cursor: pointer;
     margin: 10px 0;
-    width: 100%;
+    width: 95%;
+    font-size: 1rem;
     border-radius: 5px;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .view-button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(to right, #0f55a6 37%, #a6a6ed 89%);
+    color: #ffffff;
+    font-weight: bolder;
 }
 
 @media (max-width: 768px) {
