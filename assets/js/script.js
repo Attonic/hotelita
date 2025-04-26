@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function fetchHotels() {
         if (!hotelList) return; // Evita erros se o elemento não existir
         try {
-            const response = await fetch("http://localhost:8080/hoteis");
+            const response = await fetch("https://hotelita-api.onrender.com/hoteis");
             if (!response.ok) {
                 throw new Error("Erro ao buscar hotéis");
             }
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
             button.addEventListener("click", async (event) => {
                 const hotelId = event.target.getAttribute("data-id");
                 try {
-                    await fetch(`http://localhost:8080/hoteis/${hotelId}/incrementar-visitas`, {
+                    await fetch(`https://hotelita-api.onrender.com/hoteis/${hotelId}/incrementar-visitas`, {
                         method: "PUT"
                     });
                     // Redireciona para a página do hotel (se necessário)
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function fetchMaisVisitados() {
         if (!visitadosContainer) return; // Evita erros se o elemento não existir
         try {
-            const response = await fetch("http://localhost:8080/hoteis/populares");
+            const response = await fetch("https://hotelita-api.onrender.com/hoteis/populares");
             if (!response.ok) {
                 throw new Error("Erro ao buscar hotéis mais visitados");
             }
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
             button.addEventListener("click", async (event) => {
                 const hotelId = event.target.getAttribute("data-id");
                 try {
-                    await fetch(`http://localhost:8080/hoteis/${hotelId}/incrementar-visitas`, {
+                    await fetch(`https://hotelita-api.onrender.com/hoteis/${hotelId}/incrementar-visitas`, {
                         method: "PUT"
                     });
                     // Redireciona para a página do hotel (se necessário)
