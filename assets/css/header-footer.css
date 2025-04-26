@@ -44,6 +44,7 @@ header {
 }
 
 .logo {
+    margin-top: 1rem;
     max-width: 125px; /* Reduz o tamanho máximo da logo */
     height: auto;
     margin-right: 20px; /* Adiciona espaço à direita da logo */
@@ -200,12 +201,14 @@ footer:hover {
         flex-direction: column; /* Empilha os itens do menu */
         background-color: #fdfdfd;
         position: absolute;
-        top: 70px; /* Ajuste conforme a altura do header */
+        top: 50px; /* Ajuste conforme a altura do header */
         right: 0;
+        
         width: 100%;
         height: auto;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         padding-top: 20px; /* Adiciona espaço acima do menu */
+        z-index: 1000;
     }
 
     .menu ul {

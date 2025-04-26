@@ -24,10 +24,15 @@ document.addEventListener("DOMContentLoaded", function () {
             hotelCard.classList.add("hotel-card");
             hotelCard.innerHTML = `
                 <img src="${hotel.imagem}" alt="${hotel.nome}" class="hotel-image">
-                <h2>${hotel.nome}</h2>
+
+                <h2>>${hotel.nome}</h2>
+                
                 <p><strong>Localização:</strong> ${hotel.descricao}</p>
                 <p><strong>Contato:</strong> ${hotel.telefone}</p>
-                <button class="view-button" data-id="${hotel.id}">Ver mais</button>
+                <button class="view-button" data-id="${hotel.id}">🔍︎ Ver mais</button>
+
+                <img src="assets/img/svg/home-page-svgrepo-com.svg" alt="Search Icon"
+                class="search-icon"> 
             `;
             hotelList.appendChild(hotelCard);
         });
@@ -72,10 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
             hotelCard.classList.add("hotel-card");
             hotelCard.innerHTML = `
                 <img src="${hotel.imagem}" alt="${hotel.nome}" class="hotel-image">
-                <h2>${hotel.nome}</h2>
+                <h2>>${hotel.nome}</h2>
                 <p><strong>Localização:</strong> ${hotel.descricao}</p>
                 <p><strong>Contato:</strong> ${hotel.telefone}</p>
-                <button class="view-button" data-id="${hotel.id}">Ver mais</button>
+                <button class="view-button" data-id="${hotel.id}">🔍︎ Ver mais</button>
             `;
             visitadosContainer.appendChild(hotelCard);
         });
