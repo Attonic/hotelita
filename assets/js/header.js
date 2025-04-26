@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Defina o título com base na página
     if (pageTitle) {
         const titles = {
-            "/pages/index.html": "Hotéis em Itapecuru Mirim",
+            "/index.html": "Hotéis em Itapecuru Mirim",
             "/pages/visitados.html": "Hotéis Mais Visitados",
             "/pages/sobre.html": "Sobre o Projeto",
             "/pages/seuHotel.html": "Entre em Contato",
