@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function fetchMaisVisitados() {
         if (!visitadosContainer) return; // Evita erros se o elemento não existir
         try {
-            const response = await fetch("https://hotelita-api.onrender.com/hoteis/populares");
+            const response = await fetch("https://hotelita-api.onrender.com/hoteis/populares"); //consomei a rota de populares
             if (!response.ok) {
                 throw new Error("Erro ao buscar hotéis mais visitados");
             }
