@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <h2>>${hotel.nome}</h2>
                 
-                <p><strong>Localização:</strong> ${hotel.descricao}</p>
+                <p><strong>Descrição:</strong> ${hotel.descricao}</p>
                 <p><strong>Contato:</strong> ${hotel.telefone}</p>
                 <button class="view-button" data-id="${hotel.id}">🔍︎ Ver mais</button>
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
             hotelCard.innerHTML = `
                 <img src="${hotel.imagem}" alt="${hotel.nome}" class="hotel-image">
                 <h2>>${hotel.nome}</h2>
-                <p><strong>Localização:</strong> ${hotel.descricao}</p>
+                <p><strong>Descrição: </strong> ${hotel.descricao}</p>
                 <p><strong>Contato:</strong> ${hotel.telefone}</p>
                 <button class="view-button" data-id="${hotel.id}">🔍︎ Ver mais</button>
             `;
