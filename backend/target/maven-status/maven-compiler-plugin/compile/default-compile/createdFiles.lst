@@ -1,7 +1,0 @@
-com\hotelita\hoteis\config\TestConfig.class
-com\hotelita\hoteis\HoteisApplication.class
-com\hotelita\hoteis\service\HoteisService.class
-com\hotelita\hoteis\controller\HotelController.class
-com\hotelita\hoteis\config\DevDb.class
-com\hotelita\hoteis\model\Hotel.class
-com\hotelita\hoteis\repository\HotelRepository.class
