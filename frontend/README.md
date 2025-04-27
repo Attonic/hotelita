@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# hotelita
-=======
 # Front-end — Hotéis da Cidade 🏨🌐
 
 Este repositório contém a interface web do projeto **Hotéis da Cidade**, desenvolvida para apresentar de forma clara e responsiva as informações sobre hospedagens em **Itapecuru Mirim**, como parte de uma extensão acadêmica da **Universidade Estadual do Maranhão (UEMA)**.
@@ -45,4 +42,3 @@ Você pode abrir o site localmente apenas clicando nos arquivos `.html` dentro d
 - [Guilherme Silva](https://www.linkedin.com/in/guilherme-silva-402b35208/)
 - [João Vinicius](https://www.linkedin.com/in/joaovinicius-/)
 - [Alessandro Lopes](https://www.linkedin.com/in/alessandro-pereira-lopes-1b5602339/)
->>>>>>> frontend-origin/main
