@@ -11,7 +11,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden; /* Remove a rolagem horizontal */
+     /* Remove a rolagem horizontal */
 }
 
 main {
@@ -24,27 +24,32 @@ main {
 
 /* Ajuste para imagens dentro da main */
 main img {
+    margin-top: 2rem;
     max-width: 100%; /* Garante que as imagens não ultrapassem a largura do container */
     height: auto; /* Mantém a proporção das imagens */
     display: block;
     margin: 0 auto; /* Centraliza as imagens */
 }
 .container {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25px;
+    padding: 20px;
     background-color: #f8f9fa;
     font-family: Arial, sans-serif;
     color: #333;
     font-size: 1rem;
     line-height: 1.5;
     margin: 0 auto;
-    max-width: 100%; /* Garante que a largura máxima não ultrapasse a tela */
+    width: 100%;
+    max-width: 600px; /* Reduz ainda mais a largura máxima */
+    min-height: 70vh; /* Ajusta a altura mínima */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    overflow: hidden; /* Evita que o conteúdo ultrapasse os limites */
+    overflow: hidden;
+    box-sizing: border-box;
 }
 /* Centralizar os botões e links */
 .sobre{
@@ -86,15 +91,15 @@ main img {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin-top: 20px;
-    width: 100%; /* Garante que o formulário ocupe o espaço disponível */
-    max-width: 600px; /* Limita a largura máxima */
-    padding: 20px;
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    width: 100%; /* Faz o formulário ocupar toda a largura do container */
+    max-width: 600px; /* Define uma largura máxima menor */
+    padding: 30px;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .contact-form label {
@@ -105,8 +110,9 @@ main img {
 }
 
 .contact-form input, .contact-form textarea {
-    width: 100%;
-    max-width: 500px;
+    resize: none; /* Desativa o redimensionamento */
+    width: 100%; /* Garante que os campos ocupem toda a largura disponível */
+    max-width: 500px; /* Define uma largura máxima */
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
@@ -142,21 +148,18 @@ main img {
 
 
 @media (max-width: 576px) {
-    main {
-        padding: 10px; /* Reduz o padding em telas menores */
-    }
-
     .contact-form {
-        padding: 15px;
-        max-width: 100%; /* Garante que o formulário ocupe toda a largura disponível */
+        width: 100%; /* Garante que o formulário ocupe toda a largura */
+        max-width: 100%; /* Remove a limitação de largura máxima */
+        padding: 15px; /* Ajusta o padding para telas menores */
     }
+}
 
-    .contact-form input, .contact-form textarea {
-        font-size: 0.9rem; /* Ajusta o tamanho da fonte */
-    }
-
-    .contact-form button {
-        font-size: 1rem;
-        padding: 10px 15px;
-    }
+.message-title {
+    margin-top: 2rem;;
+    text-align: center; /* Centraliza o texto */
+    color: #007bff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px; /
 }
