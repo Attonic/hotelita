@@ -2,15 +2,23 @@
     max-width: 90%;
 }
 
+.icon-svg{
+    width: 5rem;
+    height: 5rem;
+    ; /* Espaçamento entre o ícone e o texto */
+}
+
 h3 {
+    margin-top: 2.4rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #007bff; 
     margin-bottom: 20px; 
 }
 h2 {
-    color: #ffffff; /* Azul consistente com o tema da página */
-    font-size: 1.5rem; /* Tamanho ajustado para destaque */
+    margin-top: 2.4rem;
+    color: #007bff; /* Azul consistente com o tema da página */
+    font-size: 1.8rem; /* Tamanho ajustado para destaque */
     text-align: center; /* Centraliza o texto */
     margin-bottom: 15px; /* Espaçamento inferior */
     font-weight: bold; /* Deixa o texto em negrito */
@@ -34,16 +42,12 @@ a{
     color: #333; /* Cor do texto */
 }
 
-a:hover {
-    box-shadow: 0 6px 0px rgba(0, 0, 0, 0.3);
-    font-size: 20px;
-    transition: all 0.3s ease;
-}
+
 
 .redes-sociais {
     display: flex;
     gap: 20px;
-    margin: 20px auto; /
+    margin: 20px auto; 
     padding: 10px; 
     max-width: 90%; 
 }
@@ -54,6 +58,12 @@ a:hover {
     max-width: 3rem;
 }
 
+.logo-redes:hover {
+    background: linear-gradient(to bottom, #d5dce3 37%, #bdd0e3 89%);
+    color: #ffffff;
+    font-weight: bolder;
+    cursor: pointer;
+}
 
 .carousel {
     position: relative;
@@ -74,7 +84,8 @@ a:hover {
 
 .carousel-images img {
     padding: 0.5rem; 
-    width: 100%; 
+    width: 700px; 
+    height: 500px;
     flex-shrink: 0; 
     object-fit: cover; 
     border-radius: 25px; 
@@ -91,7 +102,7 @@ a:hover {
 }
 
 .carousel-buttons button {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 10px 20px;

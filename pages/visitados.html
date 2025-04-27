@@ -11,6 +11,7 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     </head>
     <body>
         <header>
@@ -21,7 +22,32 @@
                 <!-- Os hotéis mais visitados serão inseridos aqui via JavaScript -->
             </section>
         </main>
-        <script src="../assets/js/script.js"></script>
-        <script src="../assets/js/header.js"></script>
+        <script src="/assets/js/script.js"></script>
+        <script src="/assets/js/header.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const buttonTopo = document.getElementById("buttonTopo");
+
+                window.onscroll = function () {
+                    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                    const scrollHeight = document.documentElement.scrollHeight;
+                    const clientHeight = document.documentElement.clientHeight;
+
+                    // Exibe o botão apenas quando o usuário estiver no final da página
+                    if (scrollTop + clientHeight >= scrollHeight - 100) {
+                        buttonTopo.style.display = "flex";
+                    } else {
+                        buttonTopo.style.display = "none";
+                    }
+                };
+
+                buttonTopo.onclick = function () {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                };
+            });
+        </script>
+        <button id="buttonTopo" title="Voltar ao topo">
+            <i class="fa-solid fa-arrow-up"></i> <!-- Ícone da seta -->
+        </button>
     </body>
 </html>
