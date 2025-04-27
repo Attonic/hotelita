@@ -115,9 +115,9 @@ a {
 
 main p {
     color: #1a1e21;
-    font-size: 1.2rem; /* Aumenta o tamanho da fonte dos parágrafos */
-    line-height: 2; /* Aumenta o espaçamento entre linhas */
-    margin: 10px; /* Adiciona margem lateral aos parágrafos */
+    font-size: 1.2rem; 
+    line-height: 2;
+    margin: 10px; 
     text-align: left; /* Justifica o texto */
     background-color: #ededec;
     padding: 5px 30px; /* Adiciona preenchimento interno */
