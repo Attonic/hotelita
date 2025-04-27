@@ -1,0 +1,5 @@
+# Created at 2025-04-25T21:41:22.253
+Boot Manifest-JAR contains absolute paths in classpath 'G:\Cleison\Projetos\Hotelita\hotelita-api\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
