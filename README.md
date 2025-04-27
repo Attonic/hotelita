@@ -1,4 +1,5 @@
 # 🏨 Hotelita - Plataforma de Hotéis da Cidade
+**Acesse aqui** - [Hotelita](https://hotelita.vercel.app/)
 
 O **Hotelita** é um projeto acadêmico desenvolvido por estudantes da **Universidade Estadual do Maranhão (UEMA)**, com o objetivo de facilitar a busca por hotéis e pousadas na cidade de **Itapecuru Mirim**. A plataforma é composta por um **frontend** responsivo e um **backend** robusto, que juntos oferecem uma experiência completa para usuários que desejam encontrar hospedagens de forma prática e intuitiva.
 
@@ -46,6 +47,8 @@ O **Hotelita** foi criado para conectar viajantes e moradores locais às melhore
 - **CSS3**: Estilos customizados e responsivos.
 - **JavaScript**: Interatividade e manipulação dinâmica de dados.
 - **Google Fonts** e **Font Awesome**: Para tipografia e ícones.
+- **JavaScript**: Interatividade e manipulação dinâmica de dados.
+- **Vercel**: Plataforma para hospedagem gratuita. [Vercel](https://vercel.com/)
 
 ### Backend
 - **Java 21**: Linguagem principal.
@@ -54,7 +57,7 @@ O **Hotelita** foi criado para conectar viajantes e moradores locais às melhore
 - **H2 Database**: Banco de dados em memória para desenvolvimento.
 - **PostgreSQL**: Banco de dados para produção.
 - **Maven**: Gerenciamento de dependências e build.
-
+- **Render**: Plataforma para deploy de api e banco de dados. [Render](https://render.com/)
 ---
 
 ### 📂 Estrutura do Projeto
