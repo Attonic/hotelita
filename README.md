@@ -1,7 +1,7 @@
 # 🏨 Hotelita - Plataforma de Hotéis da Cidade
 **Acesse aqui** - [Hotelita](https://hotelita.vercel.app/)
 
-O **Hotelita** é um projeto acadêmico desenvolvido por estudantes da **Universidade Estadual do Maranhão (UEMA)**, com o objetivo de facilitar a busca por hotéis e pousadas na cidade de **Itapecuru Mirim**. A plataforma é composta por um **frontend** responsivo e um **backend** robusto, que juntos oferecem uma experiência completa para usuários que desejam encontrar hospedagens de forma prática e intuitiva.
+O **Hotelita** é um projeto acadêmico desenvolvido por estudantes da **Universidade Estadual do Maranhão (UEMA)**, com o objetivo de facilitar a busca por hotéis e pousadas na cidade de **Itapecuru Mirim**. A plataforma é composta por um **frontend** responsivo e um **backend**, que juntos oferecem uma experiência completa para usuários que desejam encontrar hospedagens de forma prática e intuitiva.
 
 ---
 
